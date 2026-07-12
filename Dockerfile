@@ -12,7 +12,7 @@ RUN go mod download
 
 COPY . .
 
-RUN --mount=type=cache,id=go-build,target=/root/.cache/go-build \
+RUN --mount=type=cache,id=s/20773efb-d153-48d9-a8f3-664c063af8ac-/root/.cache/go-build,target=/root/.cache/go-build \
     go build -o ongaku ./cmd/music
 
 FROM alpine
