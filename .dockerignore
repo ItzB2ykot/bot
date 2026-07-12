@@ -11,8 +11,6 @@ bot
 *.env
 config.make
 
-configs/config.toml
-
 Dockerfile
 .dockerignore
 
