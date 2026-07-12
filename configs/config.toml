@@ -7,11 +7,11 @@ sync_commands = true
 log_channel_id = ""
 
 [database]
-host = "localhost"
+host = "postgres.railway.internal"
 port = "5432"
-user = "ItzB2ykot"
-password = "ongaku"
-dbname = "ongaku"
+user = "postgres"
+password = "wNxPMBNadoXSvzNhHgKunyuwngiwqucL"
+dbname = "railway"
 
 [[discord_nodes]]
 token = "MTUyMzMwMjY1MDgwMjYwMjEzNA.GEQK4J.7vF2Nd2vD2_Xdn0FNugNKWujeVXzouGWZsyZL0"
