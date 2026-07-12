@@ -18,6 +18,6 @@ token = "MTUyMzMwMjY1MDgwMjYwMjEzNA.GEQK4J.7vF2Nd2vD2_Xdn0FNugNKWujeVXzouGWZsyZL
 
 [[lavalink_nodes]]
 name = "main"
-address = "diplomatic-encouragement-production-f8c7.up.railway.app"
+address = "diplomatic-encouragement-production-f8c7.up.railway.app:443"
 password = "password"
-secure = false
+secure = true
