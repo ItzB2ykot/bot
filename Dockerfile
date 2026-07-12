@@ -16,9 +16,7 @@ ARG GITHASH=docker
 ARG BUILD_DATE
 
 RUN --mount=type=cache,target=/root/.cache/go-build \
-    make build \
-        GITHASH="${GITHASH}" \
-        BUILD_DATE="${BUILD_DATE:-$(date +'%Y-%m-%d %H:%M:%S')}"
+    CGO_ENABLED=1 GOOS=linux go build -o ongaku ./cmd/music
 
 FROM alpine
 
@@ -26,6 +24,9 @@ RUN apk add --no-cache ca-certificates
 
 WORKDIR /app
 
-COPY --from=builder /build/bot .
+COPY --from=builder /build/ongaku /app/ongaku
+COPY --from=builder /build/configs /app/configs
 
-ENTRYPOINT ["./bot"]
+EXPOSE 8080
+
+ENTRYPOINT ["./ongaku"]
