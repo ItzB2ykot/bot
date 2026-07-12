@@ -1,0 +1,23 @@
+dj_token = "MTUyMzMwMTMyMDcyNjAyNDIzMw.G1voph.o60bTj-QJWtVyQw_BEruwKLu0IjNbJ0B7RlSgs"  
+
+color = 3092790
+
+sync_commands = true
+
+log_channel_id = ""  # Можно оставить пустым
+
+[database]
+host = "localhost"
+port = "5432"
+user = "ItzB2ykot"
+password = "ongaku"  # ← Если пароль PostgreSQL отличается - измените
+dbname = "ongaku"      # ← Лучше переименовать в "ongaku"
+
+[[discord_nodes]]
+token = "MTUyMzMwMjY1MDgwMjYwMjEzNA.GEQK4J.7vF2Nd2vD2_Xdn0FNugNKWujeVXzouGWZsyZL0" 
+
+[[lavalink_nodes]]
+name = "main"
+address = "localhost:2333"
+password = "youshallnotpass"  
+secure = false

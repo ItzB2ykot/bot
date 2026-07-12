@@ -1,0 +1,117 @@
+server:
+  port: 2333
+  address: 0.0.0.0
+  http2:
+    enabled: false
+
+# ============ ПЛАГИНЫ ============
+lavalink:
+  plugins:
+    # LavaSrc - для Spotify, Yandex, Apple Music
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.1.0"
+      repository: "https://maven.topi314.com/releases"
+    
+    # LavaSearch - для поиска
+    - dependency: "com.github.topi314.lavasearch:lavasearch-plugin:4.0.1"
+      repository: "https://maven.topi314.com/releases"
+    
+    # YouTube Plugin - современный источник для YouTube
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.11.5"
+      repository: "https://maven.lavalink.dev/releases"
+
+  # ============ НАСТРОЙКИ LAVASRC ============
+  lavasrc:
+    providers:
+      yandex: true        # Yandex Music
+      spotify: false      # Отключен (у вас нет ключей)
+      applemusic: false   # Apple Music
+    # Если захотите включить Spotify позже:
+    # spotify:
+    #   clientId: "ваш_client_id"
+    #   clientSecret: "ваш_client_secret"
+    #   countryCode: "RU"
+
+  # ============ НАСТРОЙКИ LAVALINK ============
+  server:
+    password: "youshallnotpass"
+    
+    # Источники — отключаем старый YouTube, включаем только нужные
+    sources:
+      youtube: false      # СТАРЫЙ YouTube (отключен, используем плагин)
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      nico: true
+      http: true
+      local: false
+    
+    filters:
+      volume: true
+      equalizer: true
+      karaoke: true
+      timescale: true
+      tremolo: true
+      vibrato: true
+      distortion: true
+      rotation: true
+      channelMix: true
+      lowPass: true
+    
+    nonAllocatingFrameBuffer: false
+    bufferDurationMs: 400
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 10
+    resamplingQuality: LOW
+    trackStuckThresholdMs: 10000
+    useSeekGhosting: true
+    youtubePlaylistLoadLimit: 6
+    playerUpdateInterval: 5
+    youtubeSearchEnabled: true   # Поиск через YouTube (через плагин)
+    soundcloudSearchEnabled: true
+    soundcloudFilterOutPreviewTracks: false
+    gc-warnings: true
+
+    timeouts:
+      connectTimeoutMs: 3000
+      connectionRequestTimeoutMs: 3000
+      socketTimeoutMs: 3000
+
+# ============ НАСТРОЙКИ YOUTUBE ПЛАГИНА ============
+plugins:
+  youtube:
+    enabled: true
+    # Если нужен доступ к возрастным видео:
+    # email: "your-email@gmail.com"
+    # password: "your-password"
+
+# ============ МЕТРИКИ ============
+metrics:
+  prometheus:
+    enabled: false
+    endpoint: /metrics
+
+# ============ SENTRY ============
+sentry:
+  dsn: ""
+  environment: ""
+
+# ============ ЛОГИРОВАНИЕ ============
+logging:
+  file:
+    path: ./logs/
+  level:
+    root: INFO
+    lavalink: INFO
+  request:
+    enabled: true
+    includeClientInfo: true
+    includeHeaders: false
+    includeQueryString: true
+    includePayload: true
+    maxPayloadLength: 10000
+    beforeRequest: false
+  logback:
+    rollingpolicy:
+      max-file-size: 1GB
+      max-history: 30

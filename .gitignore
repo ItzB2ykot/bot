@@ -1,0 +1,17 @@
+# Dev directories
+.vs/
+.vscode/
+.idea/
+
+# Build
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bot
+
+# Local config
+configs/config.toml
+config.make
+.env
