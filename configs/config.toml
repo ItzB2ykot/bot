@@ -1,0 +1,24 @@
+dj_token = "MTUyMzMwMTMyMDcyNjAyNDIzMw.G1voph.o60bTj-QJWtVyQw_BEruwKLu0IjNbJ0B7RlSgs"
+
+color = 3092790
+
+sync_commands = true
+
+log_channel_id = ""
+
+[database]
+host = "localhost"
+port = "5432"
+user = "ItzB2ykot"
+password = "ongaku"
+dbname = "ongaku"
+
+[[discord_nodes]]
+token = "MTUyMzMwMjY1MDgwMjYwMjEzNA.GEQK4J.7vF2Nd2vD2_Xdn0FNugNKWujeVXzouGWZsyZL0"
+
+[[lavalink_nodes]]
+name = "main"
+address = "localhost:2333"
+password = "password"
+secure = false
+
