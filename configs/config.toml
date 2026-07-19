@@ -1,4 +1,4 @@
-dj_token = "MTUyMzMwMTMyMDcyNjAyNDIzMw.G1voph.o60bTj-QJWtVyQw_BEruwKLu0IjNbJ0B7RlSgs"
+dj_token = ""
 
 color = 3092790
 
@@ -10,11 +10,11 @@ log_channel_id = ""
 host = "postgres.railway.internal"
 port = "5432"
 user = "postgres"
-password = "wNxPMBNadoXSvzNhHgKunyuwngiwqucL"
-dbname = "railway"
+password = ""
+dbname = ""
 
 [[discord_nodes]]
-token = "MTUyMzMwMjY1MDgwMjYwMjEzNA.GEQK4J.7vF2Nd2vD2_Xdn0FNugNKWujeVXzouGWZsyZL0"
+token = ""
 
 [[lavalink_nodes]]
 name = "main"
